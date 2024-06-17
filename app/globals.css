@@ -3,3 +3,10 @@
 @tailwind utilities;
 
 
+@font-face {
+    font-family: 'League Gothic';
+    src: url('/fonts/LeagueGothic-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+
