@@ -24,6 +24,8 @@ const Navbar = () => {
     //   })
     // }, [])
 
+    // CustomCursor
+
     const handleClick = () => {
       const tl = gsap.timeline();
       tl.to(".nav-menu", {
@@ -39,10 +41,33 @@ const Navbar = () => {
         ease: "power1.inOut"
       
       })
-      tl.from(".nav-link", {
+      tl.from(".nav-link, .nav-text, .nav-icons", {
+        y: -100,
         opacity: 0,
-        stagger: 0.2
+        duration: 0.2,
+        stagger: 0.1
       })
+      tl.from(".menu-text", {
+        x: -100,
+        opacity: 0,
+        duration: 0.2,
+        stagger: {
+          each: 0.2,
+        },
+        onComplete: () => {
+          // Continuous rotation animation
+          gsap.to(".menu-text", {
+            rotation: 270,
+            duration: 1,
+            ease: "none",
+            repeat: -1,
+            repeatDelay: 1,
+            stagger: {
+              each: 0.5,
+            },
+          });
+        }
+      });
     }
 
     const handleCrossClick = () => {
@@ -71,6 +96,7 @@ const Navbar = () => {
       </div>
       {/* Nav Menu */}
       <div className='absolute bg-white top-[-100%] left-0 right-0 nav-menu'>
+        <div className='nav-menu-custom-cursor w-[10px] h-[10px] rounded-full bg-black'></div>
         <div className='mx-auto max-w-7xl w-full'>
         <div className='flex justify-end items-center pt-[60px] cross' onClick={handleCrossClick}>
             <img src="/cross.svg" className='cursor-pointer' width={24} height={24} alt="" />
@@ -78,7 +104,7 @@ const Navbar = () => {
         <div className='flex items-center justify-center'>
         <div className='flex justify-center  w-[905px] max-w-full relative'>
           <div className=''>
-          <p className='text-[24px] font-medium absolute left-[-33px] top-[36px] -rotate-90'>Menu</p>
+          <p className='text-[24px] font-medium absolute left-[-33px] top-[36px] -rotate-90 menu-text'>Menu</p>
           <div className='flex flex-col justify-start gap-[30px]'>
             {links.map((link, index) => {
               return (
@@ -94,9 +120,9 @@ const Navbar = () => {
           </div>
           </div>
           <div className='flex flex-col gap-[24px] pl-[250px] pt-[185px]'>
-            <a className='inline-block text-[24px] font-semibold' href="mailto:rizwaanans786@gmail.com">rizwaanans786@gmail.com</a>
-            <p className='text-[24px] font-semibold'>8967458695</p>
-            <div className='flex items-center justify-start pt-[30px] gap-[28px]'>
+            <a className='inline-block text-[24px] font-semibold nav-text' href="mailto:rizwaanans786@gmail.com">rizwaanans786@gmail.com</a>
+            <p className='text-[24px] font-semibold nav-text'>8967458695</p>
+            <div className='flex items-center justify-start pt-[30px] gap-[28px] nav-icons'>
             <a href="https://github.com/RizWaaN3024" target='_blank'><FiGithub size={30}/></a>
             <a href="https://www.linkedin.com/in/rizwaan-ansari-986374196/" target='_blank'><RiLinkedinFill size={35}/></a>
             <a href="mailto:rizwaanans786@gmail.com"><CiMail size={35}/></a>
