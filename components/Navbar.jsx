@@ -25,6 +25,29 @@ const Navbar = () => {
     // }, [])
 
     // CustomCursor
+    useEffect(() => {
+      const customCursor = () => {
+        const cursor = document.querySelector(".custom-cursor");
+        const navMenu = document.querySelector(".nav-menu");
+  
+        navMenu.addEventListener("mousemove", (e) => {
+          gsap.to(cursor, {
+            x: e.clientX,
+            y: e.clientY,
+            ease: "power2.out", // Optional: Specify animation ease
+          });
+        });
+      };
+  
+      customCursor();
+  
+      // Cleanup function
+      return () => {
+        const navMenu = document.querySelector(".nav-menu");
+        navMenu.removeEventListener("mousemove", customCursor);
+      };
+    }, []);
+    
 
     const handleClick = () => {
       const tl = gsap.timeline();
@@ -96,7 +119,7 @@ const Navbar = () => {
       </div>
       {/* Nav Menu */}
       <div className='absolute bg-white top-[-100%] left-0 right-0 nav-menu'>
-        <div className='nav-menu-custom-cursor w-[10px] h-[10px] rounded-full bg-black'></div>
+      <div className='custom-cursor bg-black w-[10px] h-[10px] rounded-full fixed z-10'></div>
         <div className='mx-auto max-w-7xl w-full'>
         <div className='flex justify-end items-center pt-[60px] cross' onClick={handleCrossClick}>
             <img src="/cross.svg" className='cursor-pointer' width={24} height={24} alt="" />

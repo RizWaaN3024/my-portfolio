@@ -1,6 +1,10 @@
-import React from 'react'
+"use client"
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
 
 const Hero = () => {
+ // Empty dependency array ensures the effect runs only once on mount
+
   return (
     <div className=''>
       <div className='text-white text-center m-auto text-[96px] mt-[195px]'>
@@ -11,7 +15,7 @@ const Hero = () => {
       </div>
       {/* Nav Menu */}
     </div>
-  )
-}
+  );
+};
 
-export default Hero
+export default Hero;
