@@ -1,10 +1,11 @@
 "use client";
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation'
 import {FiGithub} from 'react-icons/fi'
 import { CiMail } from 'react-icons/ci'
 import { RiLinkedinFill } from 'react-icons/ri'
-import React from 'react'
 
 
 const links = [
@@ -15,19 +16,63 @@ const links = [
 ]
 const Navbar = () => {
 
+    // useEffect(() => {
+    //   gsap.from(".logo", {
+    //     y: -200,
+    //     duration: 1,
+    //     delay: 1
+    //   })
+    // }, [])
+
+    const handleClick = () => {
+      const tl = gsap.timeline();
+      tl.to(".nav-menu", {
+        top:0,
+        bottom: 0,
+        duration: 0.5,
+        ease: "power2.in",
+      })
+      gsap.from(".nav-menu", {
+        duration: 1,
+        borderBottomLeftRadius: "50%",
+        borderBottomRightRadius: "50%",
+        ease: "power1.inOut"
+      
+      })
+      tl.from(".nav-link", {
+        opacity: 0,
+        stagger: 0.2
+      })
+    }
+
+    const handleCrossClick = () => {
+      gsap.to(".nav-menu", {
+        top: '-100%',
+        bottom: '100%',
+        duration: 0.5,
+        ease: "power3.inOut"
+      })
+      gsap.from(".nav-menu", {
+        borderBottomLeftRadius: "50%",
+        borderBottomRightRadius: "50%",
+        ease: "power1.inOut"
+      
+      })
+    }
+
   const path = usePathname();
   return (
     <div className='flex items-center justify-between'>
       <div className='pt-[60px]'>
-        <img src="/logo-no-background.svg" height={80} width={80} alt="" />
+        <img src="/logo-no-background.svg" className='logo' height={80} width={80} alt="" />
       </div>
-      <div className='pt-[90px]'>
+      <div className='pt-[90px]' onClick={handleClick}>
         <img src="/hamburger.svg" className='cursor-pointer' height={24} width={36} alt="" />
       </div>
       {/* Nav Menu */}
-      <div className='absolute hidden bg-white top-0 bottom-0 left-0 right-0'>
+      <div className='absolute bg-white top-[-100%] left-0 right-0 nav-menu'>
         <div className='mx-auto max-w-7xl w-full'>
-        <div className='flex justify-end items-center pt-[60px]'>
+        <div className='flex justify-end items-center pt-[60px] cross' onClick={handleCrossClick}>
             <img src="/cross.svg" className='cursor-pointer' width={24} height={24} alt="" />
         </div>
         <div className='flex items-center justify-center'>
@@ -40,7 +85,7 @@ const Navbar = () => {
                 <Link
                 href={link.path}
                 key={index}
-                className={`capitalize text-[64px] font-bold`}
+                className={`capitalize text-[64px] font-bold nav-link`}
               >
                 {link.name}
               </Link>
