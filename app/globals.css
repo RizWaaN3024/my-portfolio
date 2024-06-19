@@ -10,3 +10,23 @@
     font-style: normal;
   }
 
+  .marquee-animation::-webkit-scrollbar {
+    display: none;
+  }
+  .marquee-animation .content{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes move {
+  from{
+      transform: translateX(0);
+  }
+  to{
+      transform: translateX(-100%);
+  }
+  
+}
