@@ -5,9 +5,10 @@ import { CSSPlugin } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(CSSPlugin);
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
-    gsap.registerPlugin(ScrollTrigger);
+
     useEffect(() => {
         gsap.fromTo(".about-title, .about-desc", {
             y: 100,
@@ -58,7 +59,7 @@ const AboutMe = () => {
 
 
   return (
-    <div className="container mx-auto about-section relative">
+    <div className="container mx-auto about-section relative py-[40px]">
       <div className="text-center mt-[60px] border-b-2 border-black">
         <h2 className="text-[94px] font-bold about-title">About Me</h2>
       </div>

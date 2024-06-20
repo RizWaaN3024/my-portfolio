@@ -1,6 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
+import Skills from "@/components/Skills";
 import Image from "next/image";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       </div>
       <div className="sm:px-10 px-5 w-full">
         <AboutMe />
+        <Skills />
       </div>
       
     </main>
