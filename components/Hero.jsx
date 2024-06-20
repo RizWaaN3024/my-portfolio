@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
+import Marquee from './Marquee';
 
 const Hero = () => {
   useEffect(() => {
@@ -43,9 +44,7 @@ const Hero = () => {
         <div className='content inline-block whitespace-nowrap'>
           <p className='inline-block'>BUILDING WEBSITES PRODUCTS AND EXPERIENCES&nbsp;</p>
         </div>
-        <div className='content inline-block whitespace-nowrap'>
-          <p className='inline-block'>BUILDING WEBSITES PRODUCTS AND EXPERIENCES&nbsp;</p>
-        </div>
+        <Marquee />
       </div>
     </div>
   );
