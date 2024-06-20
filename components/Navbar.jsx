@@ -118,7 +118,7 @@ const Navbar = () => {
         <img src="/hamburger.svg" className='cursor-pointer' height={24} width={36} alt="" />
       </div>
       {/* Nav Menu */}
-      <div className='absolute bg-white top-[-100%] left-0 right-0 nav-menu'>
+      <div className='absolute bg-white top-[-100%] left-0 right-0 nav-menu max-h-[100vh]'>
       <div className='custom-cursor bg-black w-[10px] h-[10px] rounded-full fixed z-10'></div>
         <div className='mx-auto max-w-7xl w-full'>
         <div className='flex justify-end items-center pt-[60px] cross' onClick={handleCrossClick}>
