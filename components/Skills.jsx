@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import axios from 'axios'
 import dotenv from 'dotenv'
+import { FiGithub } from 'react-icons/fi'
 
 dotenv.config();
 
@@ -89,17 +89,21 @@ const Skills = () => {
       <div>
         <h2 className='skill-title text-[94px] text-center'>My Skills</h2>
       </div>
-      <div>
+      <div className='flex justify-between items-center'>
+        <div className='w-[65%]'>
         <div className='pt-[42px]'>
             <p className='text-[42px] font-bold'>Why hire me?</p>
         </div>
         <div>
             <p className='text-[32px] text-wrap'>I'm passionate about crafting exceptional digital experiences and bringing creative ideas to life. My approach is fueled by a deep passion for innovation and a commitment to delivering excellence in every project. I embrace the learning process with enthusiasm, diving into documentation to ensure thorough understanding and meticulous execution.</p>
         </div>
-        <div className='github-section'>
-          <h2>Github Stats</h2>
-          <p>Repositories: {repoCount}</p>
-          <p>Commits: {commitCount}</p>
+        </div>
+        <div className='github-section flex flex-col border-[2px] rounded-lg w-[35%] bg-black bg-opacity-60 backdrop-filter backdrop-blur-lg shadow-2xl'>
+          <h2 className='text-[42px] font-bold pb-[54px] pl-[24px]'>Github Stats <FiGithub className='inline-block ml-[16px]'/></h2>
+          <div className='flex pl-[24px]'>
+          <p >Repositories: {repoCount}</p>
+          <p className='pb-[48px]'>Commits: {commitCount}</p>
+          </div>
         </div>
       </div>
     </div>
