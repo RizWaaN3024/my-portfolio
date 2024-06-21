@@ -72,7 +72,7 @@ const AboutMe = () => {
         
       </div>
       <div className="absolute right-0 z-[-1]">
-        <video src="/RJ-BALL-BLUE-ORANGE-scaled.webm" autoplay loop muted></video>
+        <video src="/RJ-BALL-BLUE-ORANGE-scaled.webm" autoPlay loop muted></video>
       </div>
 
       <div className=" pt-[44px] overflow-hidden">
