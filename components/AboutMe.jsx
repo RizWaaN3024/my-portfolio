@@ -82,7 +82,7 @@ const AboutMe = () => {
           and robust </p> <p className="text-[36px] text-center overflow-hidden about-desc2">back-end systems. By night, I'm...well, still a coder. But
           with more snacks and bad puns.</p>
       </div>
-      <div className=" pt-[44px] overflow-hidden">
+      <div className=" pt-[44px] overflow-hidden pb-[40px]">
         <h3 className="text-[42px] font-bold text-center border-b-2 border-black about-title3">The Origin Story</h3>
         <p className="text-[36px] text-center pt-[24px] overflow-hidden about-desc3">
           Once upon a time, in a land filled with syntax errors and 404 pages, I

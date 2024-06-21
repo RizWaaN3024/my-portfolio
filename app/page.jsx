@@ -1,7 +1,7 @@
 import AboutMe from "@/components/AboutMe";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
-import Skills from "@/components/Skills";
+import Skills from "@/components/WhyHireMe";
 import Image from "next/image";
 
 export default function Home() {
@@ -15,7 +15,9 @@ export default function Home() {
       </div>
       <div className="sm:px-10 px-5 w-full">
         <AboutMe />
-        <Skills />
+      </div>
+      <div className="sm:px-10 px-5 w-full bg-black">
+      <Skills />
       </div>
       
     </main>
