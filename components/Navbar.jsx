@@ -40,11 +40,36 @@ const Navbar = () => {
       };
   
       customCursor();
+      // navLink animation
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach((link) => {
+        link.addEventListener("mouseover", () => {
+          gsap.to(link, {
+            x: 60,
+            scale: 1.4,
+            duration: 0.2,
+            ease: "power2.out"
+          })
+        })
+        link.addEventListener("mouseout", () => {
+          gsap.to(link, {
+            x: 0,
+            scale: 1,
+            duration: 0.3,
+            ease: "power2.out"
+          })
+        })
+      })
   
       // Cleanup function
       return () => {
         const navMenu = document.querySelector(".nav-menu");
         navMenu.removeEventListener("mousemove", customCursor);
+
+        navLinks.forEach((link) => {
+          link.removeEventListener("mouseover", null);
+          link.removeEventListener("mouseout", null);
+        })
       };
     }, []);
     
