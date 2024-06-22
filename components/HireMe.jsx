@@ -15,7 +15,7 @@ const HireMe = () => {
         }, {
             y: 0,
             opacity: 1,
-            duration: 0.2,
+            duration: 1,
             scrollTrigger: {
                 trigger: ".hire-page",
                 start: "top 30%",
@@ -30,7 +30,7 @@ const HireMe = () => {
         }, {
             y: 0,
             opacity: 1,
-            duration: 0.2,
+            duration: 1,
             scrollTrigger: {
                 trigger: ".hire-page",
                 start: "top 20%",

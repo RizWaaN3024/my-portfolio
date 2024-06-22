@@ -87,14 +87,14 @@ const Skills = () => {
   return (
     <div className='container mx-auto py-[40px] text-white'>
       <div className='flex justify-between items-center'>
-        <div className='w-[65%]'>
+        <div className='w-[65%] max-w-full'>
 
-        <div>
+        <div className=''>
             <p className='text-[32px] text-wrap'>I'm passionate about crafting exceptional digital experiences and bringing creative ideas to life. My approach is fueled by a deep passion for innovation and a commitment to delivering excellence in every project. I embrace the learning process with enthusiasm, diving into documentation to ensure thorough understanding and meticulous execution.</p>
         </div>
         </div>
-        <div className='github-section flex flex-col  rounded-lg w-[35%] bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-2xl'>
-          <h2 className='text-[42px] font-bold pb-[54px] pl-[24px]'>Github Stats <FiGithub className='inline-block ml-[16px]'/></h2>
+        <div className='github-section flex flex-col w-[33%] max-w-[100%]  rounded-lg bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-2xl'>
+          <h2 className='text-[42px] font-bold pl-[24px]'>Github Stats <FiGithub className='inline-block ml-[16px]'/></h2>
           <div className='flex pl-[24px]'>
           <p >Repositories: {repoCount}</p>
           <p className='pb-[48px]'>Commits: {commitCount}</p>
