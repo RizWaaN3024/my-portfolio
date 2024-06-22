@@ -47,9 +47,30 @@ const HireMe = () => {
         },
       }
     );
+
+    // String Animation
+    var path = "M 10 100 Q 500 100 1400 100";
+    var finalPath = "M 10 100 Q 500 100 1400 100";
+
+    var string = document.querySelector("#string");
+    string.addEventListener("mousemove", (dets) => {
+      path = `M 10 100 Q ${dets.x} ${dets.y} 1400 100`
+      gsap.to('svg path', {
+        attr: {d: path},
+        duration: 0.5,
+        ease: "power3.out"
+      })
+      string.addEventListener("mouseleave", () => {
+        gsap.to("svg path", {
+          attr: {d:finalPath},
+          duration: 1.5,
+          ease: "elastic.out(1,0.2)"
+        })
+      })
+    })
   }, []);
   return (
-    <div className="hire-page w-full h-full py-[24px] relative overflow-x-hidden">
+    <div className="hire-page w-full overflow-y-visible h-full py-[24px] relative overflow-x-hidden">
       <div className="hire-text text-white">
         <h2 className="top-text overflow-y-hidden text-[16vw] text-nowrap uppercase font-bold leading-normal">
           Why <span>hire</span>
@@ -59,9 +80,11 @@ const HireMe = () => {
           Me?
         </h2>
       </div>
-      <svg width="1400" height="160">
+        <div id="string" className="">
+        <svg width="1400" height="300">
             <path d="M 10 100 Q 500 100 1400 100" stroke="white" fill="transparent"/>
-        </svg>
+      </svg>
+        </div>
     </div>
   );
 };

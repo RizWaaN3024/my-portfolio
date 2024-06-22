@@ -85,7 +85,7 @@ const Skills = () => {
       fetchGitHubData();
   }, []);
   return (
-    <div className='container mx-auto py-[40px] text-white'>
+    <div className='container mx-auto text-white'>
       <div className='flex justify-between items-center'>
         <div className='w-[65%] max-w-full'>
 
