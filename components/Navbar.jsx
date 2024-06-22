@@ -170,7 +170,7 @@ const Navbar = () => {
           <div className='flex flex-col gap-[24px] pl-[250px] pt-[185px]'>
             <a className='inline-block text-[24px] font-semibold nav-text' href="mailto:rizwaanans786@gmail.com">rizwaanans786@gmail.com</a>
             <p className='text-[24px] font-semibold nav-text'>8967458695</p>
-            <div className='flex items-center justify-start pt-[30px] gap-[28px] nav-icons'>
+            <div className='flex items-center justify-start pt-[30px] gap-[28px] z-[10] nav-icons'>
             <a href="https://github.com/RizWaaN3024" target='_blank'><FiGithub size={30}/></a>
             <a href="https://www.linkedin.com/in/rizwaan-ansari-986374196/" target='_blank'><RiLinkedinFill size={35}/></a>
             <a href="mailto:rizwaanans786@gmail.com"><CiMail size={35}/></a>

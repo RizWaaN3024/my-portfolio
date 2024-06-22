@@ -63,8 +63,8 @@ const HireMe = () => {
       string.addEventListener("mouseleave", () => {
         gsap.to("svg path", {
           attr: {d:finalPath},
-          duration: 1.5,
-          ease: "elastic.out(1,0.2)"
+          duration: 1,
+          ease: "bounce.out"
         })
       })
     })
