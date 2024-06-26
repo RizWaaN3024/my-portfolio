@@ -1,108 +1,136 @@
-"use client"
-import React, { useEffect, useState } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import dotenv from 'dotenv'
-import { FiGithub } from 'react-icons/fi'
+"use client";
+import React, { useEffect, useState } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import dotenv from "dotenv";
+import { FiGithub } from "react-icons/fi";
 
 dotenv.config();
 
 const GITHUB_TOKEN = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
-const USERNAME = 'RizWaaN3024';
+const USERNAME = "RizWaaN3024";
 
 gsap.registerPlugin(ScrollTrigger);
 const Skills = () => {
-    const [repoCount, setRepoCount] = useState(0);
-    const [commitCount, setCommitCount] = useState(0);
-    
-    const skillAnimation = () => {
-        gsap.fromTo(".skill-title", {
-            y: 100,
-            opacity: 0,
-        }, {
-            y: 0,
-            opacity: 1,
-            duration: 0.2,
-            scrollTrigger: {
-                trigger: ".skill-title",
-                start: "top 47%",
-                end: "top 49%",     
-                scrub: 2,
-                markers: true
-            }
-        });
-    }
-    useEffect(() => {
-        skillAnimation(); // Call animation function inside useEffect
-        // Fetch github Data
-        const fetchGitHubData = async () => {
-          console.log("Fetching GitHub data..."); // Debugging
+  const [repoCount, setRepoCount] = useState(0);
+  const [commitCount, setCommitCount] = useState(0);
 
-          try {
-              const headers = {
-                  'Authorization': `token ${GITHUB_TOKEN}`
-              };
+  const skillAnimation = () => {
+    gsap.fromTo(
+      ".skill-title",
+      {
+        y: 100,
+        opacity: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 0.2,
+        scrollTrigger: {
+          trigger: ".skill-title",
+          start: "top 47%",
+          end: "top 49%",
+          scrub: 2,
+          markers: true,
+        },
+      }
+    );
+  };
+  useEffect(() => {
+    skillAnimation(); // Call animation function inside useEffect
+    // Fetch github Data
+    const fetchGitHubData = async () => {
+      console.log("Fetching GitHub data..."); // Debugging
 
-              console.log("Headers:", headers); // Debugging
+      try {
+        const headers = {
+          Authorization: `token ${GITHUB_TOKEN}`,
+        };
 
-              const reposResponse = await fetch(`https://api.github.com/users/${USERNAME}/repos?per_page=100`, { headers });
-              const repos = await reposResponse.json();
+        console.log("Headers:", headers); // Debugging
 
-              console.log("Repos:", repos); // Debugging
+        const reposResponse = await fetch(
+          `https://api.github.com/users/${USERNAME}/repos?per_page=100`,
+          { headers }
+        );
+        const repos = await reposResponse.json();
 
-              setRepoCount(repos.length);
+        console.log("Repos:", repos); // Debugging
 
-              let totalCommits = 0;
-              const currentYear = new Date().getFullYear();
+        setRepoCount(repos.length);
 
-              for (const repo of repos) {
-                  let page = 1;
-                  let commitsLength = 0;
+        let totalCommits = 0;
+        const currentYear = new Date().getFullYear();
 
-                  do {
-                      const commitsResponse = await fetch(`https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?per_page=100&page=${page}`, { headers });
-                      const commits = await commitsResponse.json();
-                      commitsLength = commits.length;
+        for (const repo of repos) {
+          let page = 1;
+          let commitsLength = 0;
 
-                      for (const commit of commits) {
-                          const commitDate = new Date(commit.commit.author.date);
-                          if (commitDate.getFullYear() === currentYear) {
-                              totalCommits++;
-                          }
-                      }
+          do {
+            const commitsResponse = await fetch(
+              `https://api.github.com/repos/${repo.owner.login}/${repo.name}/commits?per_page=100&page=${page}`,
+              { headers }
+            );
+            const commits = await commitsResponse.json();
+            commitsLength = commits.length;
 
-                      page++;
-                  } while (commitsLength === 100);
+            for (const commit of commits) {
+              const commitDate = new Date(commit.commit.author.date);
+              if (commitDate.getFullYear() === currentYear) {
+                totalCommits++;
               }
+            }
 
-              console.log("Total Commits:", totalCommits); // Debugging
-              setCommitCount(totalCommits);
-          } catch (error) {
-              console.error('Error fetching data from GitHub API:', error);
-          }
-      };
+            page++;
+          } while (commitsLength === 100);
+        }
 
-      fetchGitHubData();
+        console.log("Total Commits:", totalCommits); // Debugging
+        setCommitCount(totalCommits);
+      } catch (error) {
+        console.error("Error fetching data from GitHub API:", error);
+      }
+    };
+
+    fetchGitHubData();
   }, []);
   return (
-    <div className='container mx-auto text-white'>
-      <div className='flex justify-between items-center'>
-        <div className='w-[65%] max-w-full'>
-
-        <div className=''>
-            <p className='text-[32px] text-wrap'>I'm passionate about crafting exceptional digital experiences and bringing creative ideas to life. My approach is fueled by a deep passion for innovation and a commitment to delivering excellence in every project. I embrace the learning process with enthusiasm, diving into documentation to ensure thorough understanding and meticulous execution.</p>
+    <div className="container mx-auto text-white">
+      <div className="grid grid-cols-12">
+        <div className="col-span-8">
+          <div className="p-[24px]">
+          <p className="text-[36px] break-words whitespace-wrap">
+            I'm passionate about crafting exceptional digital experiences and
+            bringing creative ideas to life. My approach is fueled by a deep
+            passion for innovation and a commitment to delivering excellence in
+            every project. I embrace the learning process with enthusiasm,
+            diving into documentation to ensure thorough understanding and
+            meticulous execution.
+          </p>
+          </div>
         </div>
-        </div>
-        <div className='github-section flex flex-col w-[33%] max-w-[100%]  rounded-lg bg-white bg-opacity-30 backdrop-filter backdrop-blur-lg shadow-2xl'>
-          <h2 className='text-[42px] font-bold pl-[24px]'>Github Stats <FiGithub className='inline-block ml-[16px]'/></h2>
-          <div className='flex pl-[24px]'>
-          <p >Repositories: {repoCount}</p>
-          <p className='pb-[48px]'>Commits: {commitCount}</p>
+        <div className="github-section col-span-4 max-w-[100%]  rounded-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-2xl">
+          <div className="p-[24px] h-full">
+          <h2 className="text-[42px] font-bold pl-[24px]">
+            Github Stats <FiGithub className="inline-block ml-[16px]" />
+          </h2>
+          <div className="">
+          <div className="flex">
+            <div className="flex flex-col items-center">
+            <p className="text-[64px]">{repoCount}</p>
+            <p className="text-center">Public Repositories On GitHub</p>
+            </div>
+            <div className="flex flex-col items-center">
+            <p className="text-[64px]">{commitCount}</p>
+            <p className="text-center">Commits made last year on GitHub</p>
+            </div>
+          </div>
+          </div>
           </div>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
