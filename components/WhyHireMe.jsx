@@ -110,11 +110,11 @@ const Skills = () => {
           </div>
         </div>
         <div className="github-section col-span-4 max-w-[100%]  rounded-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-2xl">
-          <div className="p-[24px] h-full">
+          <div className="p-[24px] h-full flex flex-col items-center">
           <h2 className="text-[42px] font-bold pl-[24px]">
             Github Stats <FiGithub className="inline-block ml-[16px]" />
           </h2>
-          <div className="">
+          <div className="h-full flex items-center justify-center">
           <div className="flex">
             <div className="flex flex-col items-center">
             <p className="text-[64px]">{repoCount}</p>
