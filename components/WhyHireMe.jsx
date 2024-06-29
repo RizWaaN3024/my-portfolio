@@ -97,37 +97,43 @@ const Skills = () => {
   return (
     <div className="container mx-auto text-white">
       <div className="grid grid-cols-12">
-        <div className="col-span-8">
+        <div className="col-span-12">
           <div className="p-[24px]">
-          <p className="text-[36px] break-words whitespace-wrap">
-            I'm passionate about crafting exceptional digital experiences and
-            bringing creative ideas to life. My approach is fueled by a deep
-            passion for innovation and a commitment to delivering excellence in
-            every project. I embrace the learning process with enthusiasm,
-            diving into documentation to ensure thorough understanding and
-            meticulous execution.
-          </p>
+            <p className="text-[32px] break-words whitespace-wrap">
+              I love creating exceptional digital experiences and bringing new
+              ideas to life. I have a strong passion for innovation and
+              continuous learning. While I may not always know everything, I am
+              committed to thoroughly understanding my work. Whenever I start a
+              new project, I make sure to dive into the documentation, learning
+              all the details to ensure I follow best practices and deliver
+              high-quality results. My approach is grounded in careful research
+              and meticulous execution, ensuring every project is done right.
+            </p>
           </div>
         </div>
-        <div className="github-section col-span-4 max-w-[100%]  rounded-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-2xl">
+        {/* <div className="github-section col-span-4 max-w-[100%]  rounded-lg bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-2xl">
           <div className="p-[24px] h-full flex flex-col items-center">
-          <h2 className="text-[42px] font-bold pl-[24px]">
-            Github Stats <FiGithub className="inline-block ml-[16px]" />
-          </h2>
-          <div className="h-full flex items-center justify-center">
-          <div className="flex">
-            <div className="flex flex-col items-center">
-            <p className="text-[64px]">{repoCount}</p>
-            <p className="text-center">Public Repositories On GitHub</p>
+            <div className="border rounded-[10px] px-6">
+              <h2 className="text-[42px] font-bold pl-[24px]">
+                Github Stats <FiGithub className="inline-block ml-[16px]" />
+              </h2>
             </div>
-            <div className="flex flex-col items-center">
-            <p className="text-[64px]">{commitCount}</p>
-            <p className="text-center">Commits made last year on GitHub</p>
+            <div className="h-full flex items-center justify-center">
+              <div className="flex">
+                <div className="flex flex-col items-center">
+                  <p className="text-[64px]">{repoCount}</p>
+                  <p className="text-center">Public Repositories On GitHub</p>
+                </div>
+                <div className="flex flex-col items-center">
+                  <p className="text-[64px]">{commitCount}</p>
+                  <p className="text-center">
+                    Commits made last year on GitHub
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          </div>
-          </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

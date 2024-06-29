@@ -30,3 +30,24 @@
   }
   
 }
+@keyframes move2 {
+  from{
+      transform: translateX(-100%);
+  }
+  to{
+      transform: translateX(0%);
+  }
+  
+}
+
+.marquee-animation2::-webkit-scrollbar {
+  display: none;
+}
+.marquee-animation2 .content{
+  white-space: nowrap;
+  display: inline-block;
+  animation-name: move2;
+  animation-duration: 10s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

@@ -7,10 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'league-spartan': ['"League Spartan"', 'sans-serif'],
-        'league-gothic': ['"League Gothic"', 'sans-serif'],
-      },
       fontWeight: {
         100: '100',
         200: '200',
