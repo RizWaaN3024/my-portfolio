@@ -27,7 +27,7 @@ const Hero = () => {
   // }, []);
 
   return (
-    <div className={`hero-section container mx-auto ${spartan.className}`}>
+    <div className={`hero-section container mx-auto ${spartan.className} py-[100px]`}>
       {/* <div className='text-white text-center m-auto text-[96px] mt-[195px]'>
         <h1 className='opacity-1'><span>R</span><span>I</span><span>Z</span><span>W</span><span>A</span><span>A</span><span>N</span> <span>A</span><span>N</span><span>S</span><span>A</span><span>R</span><span>I</span></h1>
       </div>
@@ -36,8 +36,8 @@ const Hero = () => {
       </div> */}
 
       {/* Hero Text */}
-      <div className='flex items-start justify-betweens'>
-      <div className='text-[164px] leading-[1] text-white py-[100px]'>
+      <div className='flex items-start justify-between'>
+      <div className='text-[164px] leading-[1] text-white'>
         <div className=''>
           <h1 className=''>RIZWAAN</h1>
         </div>
@@ -57,6 +57,7 @@ const Hero = () => {
         </div>
       </div>
       </div>
+      <div className='pt-[64px]'>
       <div className='marquee-animation text-white text-[4rem] overflow-x-auto whitespace-nowrap'>
         <div className='content inline-block whitespace-nowrap'>
           <p className='inline-block'>BUILDING WEBSITES PRODUCTS AND <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600'>EXPERIENCES</span>&nbsp; </p>
@@ -74,6 +75,7 @@ const Hero = () => {
         <p className='inline-block'>REACT JS NEXT JS NODE JS <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600'>PHP DOCKER WORDPRESS</span>&nbsp; </p>
         </div>
         {/* <Marquee /> */}
+      </div>
       </div>
     </div>
   );
