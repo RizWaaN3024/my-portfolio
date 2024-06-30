@@ -24,7 +24,7 @@ const HireMe = () => {
           start: "top 30%",
           end: "top 29%",
           scrub: 2,
-          markers: true,
+          // markers: true,
         },
       }
     );
@@ -43,7 +43,7 @@ const HireMe = () => {
           start: "top 20%",
           end: "top 19%",
           scrub: 2,
-          markers: true,
+          // markers: true,
         },
       }
     );
