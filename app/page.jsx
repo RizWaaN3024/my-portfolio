@@ -12,10 +12,11 @@ export default function Home() {
       <div className="w-full ">
         <Navbar />
         <Hero />
+        <AboutMe />
       </div>
       </div>
       <div className="sm:px-10 px-5 w-full">
-        <AboutMe />
+        
       </div>
       <div className="sm:px-10 px-5 w-full bg-black">
       <HireMe />

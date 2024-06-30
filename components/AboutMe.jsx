@@ -59,8 +59,8 @@ const AboutMe = () => {
 
 
   return (
-    <div className="container mx-auto about-section relative py-[40px]">
-      <div className="text-center mt-[60px] border-b-2 border-black">
+    <div className="container mx-auto about-section relative py-[40px] text-white">
+      <div className="text-center mt-[60px] border-b-2 border-white">
         <h2 className="text-[94px] font-bold about-title">About Me</h2>
       </div>
       <div className="pt-[24px] text-[36px] text-center overflow-hidden">
@@ -71,19 +71,19 @@ const AboutMe = () => {
            
         
       </div>
-      <div className="absolute right-0 z-[-1]">
+      <div className="absolute right-0 z-[1]">
         <video src="/RJ-BALL-BLUE-ORANGE-scaled.webm" autoPlay loop muted></video>
       </div>
 
       <div className=" pt-[44px] overflow-hidden">
-        <h3 className="text-[42px] font-bold text-center border-b-2 border-black about-title2">The Short Story</h3>
+        <h3 className="text-[42px] font-bold text-center border-b-2 border-white about-title2">The Short Story</h3>
         <p className="text-[36px] text-center pt-[24px] overflow-hidden about-desc2">
           By day, I'm a mild-mannered coder, crafting seamless user experiences
           and robust </p> <p className="text-[36px] text-center overflow-hidden about-desc2">back-end systems. By night, I'm...well, still a coder. But
           with more snacks and bad puns.</p>
       </div>
       <div className=" pt-[44px] overflow-hidden pb-[40px]">
-        <h3 className="text-[42px] font-bold text-center border-b-2 border-black about-title3">The Origin Story</h3>
+        <h3 className="text-[42px] font-bold text-center border-b-2 border-white about-title3">The Origin Story</h3>
         <p className="text-[36px] text-center pt-[24px] overflow-hidden about-desc3">
           Once upon a time, in a land filled with syntax errors and 404 pages, I
           embarked on a quest to master the mystical arts of HTML, CSS and
