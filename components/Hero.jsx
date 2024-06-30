@@ -36,13 +36,13 @@ const Hero = () => {
       </div> */}
 
       {/* Hero Text */}
-      <div className='flex items-start justify-between'>
-      <div className='text-[164px] leading-[1] text-white'>
+      <div className=''>
+      <div className='text-[75px] leading-[1] text-white flex flex-col items-center justify-center'>
         <div className=''>
-          <h1 className=''>RIZWAAN</h1>
+          <h1 className=''>RIZWAAN ANSARI</h1>
         </div>
         <div className=''>
-        <h2 className=''>ANSARI</h2>
+        {/* <h2 className=''>ANSARI</h2> */}
         </div>
         <div className=''>
           <h2>FULL <span className='text-purple-500'>STACK</span></h2>
@@ -51,11 +51,11 @@ const Hero = () => {
           <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">DEVELOPER</h2>
         </div>
       </div>
-      <div className='mt-[100px]'>
+      {/* <div className='mt-[100px]'>
         <div className='aspect-[339/175] w-[339px] max-w-[100%] flex'>
         <img className='w-full' src="/graphic.png" alt="" />
         </div>
-      </div>
+      </div> */}
       </div>
       <div className='pt-[64px]'>
       <div className='marquee-animation text-white text-[4rem] overflow-x-auto whitespace-nowrap'>
