@@ -135,12 +135,12 @@ const Navbar = () => {
 
   const path = usePathname();
   return (
-    <div className='container mx-auto flex items-center justify-between'>
-      <div className='pt-[60px]'>
+    <div className='container mx-auto flex items-center justify-between pt-9'>
+      <div className=''>
         <img src="/logo-no-background.svg" className='logo' height={70} width={68} alt="" />
       </div>
-      <div className='pt-[90px]' onClick={handleClick}>
-        <img src="/hamburger.svg" className='cursor-pointer' height={24} width={36} alt="" />
+      <div className='' onClick={handleClick}>
+        <img src="/ham.svg" className='cursor-pointer' height={24} width={36} alt="" />
       </div>
       {/* Nav Menu */}
       <div className='absolute bg-white top-[-100%] left-0 right-0 nav-menu max-h-[100vh]'>
