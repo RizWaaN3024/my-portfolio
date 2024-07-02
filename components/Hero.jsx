@@ -27,7 +27,7 @@ const Hero = () => {
   // }, []);
 
   return (
-    <div className={`hero-section container mx-auto ${spartan.className} py-[100px]`}>
+    <div className={`hero-section container mx-auto ${spartan.className} py-[100px] border-b border-[#484E53]`}>
       {/* <div className='text-white text-center m-auto text-[96px] mt-[195px]'>
         <h1 className='opacity-1'><span>R</span><span>I</span><span>Z</span><span>W</span><span>A</span><span>A</span><span>N</span> <span>A</span><span>N</span><span>S</span><span>A</span><span>R</span><span>I</span></h1>
       </div>
