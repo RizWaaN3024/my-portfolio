@@ -56,7 +56,11 @@ const Hero = () => {
         <img className='w-full' src="/graphic.png" alt="" />
         </div>
       </div> */}
+      <div>
+        <a href="#" className='px-8 py-3 rounded-[50px] text-white text-[16px] border border-white'>Say hi👋</a>
       </div>
+      </div>
+      
       <div className='pt-[64px]'>
       <div className='marquee-animation text-white text-[4rem] overflow-x-auto whitespace-nowrap'>
         <div className='content inline-block whitespace-nowrap'>
