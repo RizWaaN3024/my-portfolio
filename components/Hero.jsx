@@ -36,7 +36,7 @@ const Hero = () => {
       </div> */}
 
       {/* Hero Text */}
-      <div className=''>
+      <div className='flex flex-col justify-center items-center'>
       <div className='text-[75px] leading-[1] text-white flex flex-col items-center justify-center'>
         <div className=''>
           <h1 className=''>RIZWAAN ANSARI</h1>
@@ -56,7 +56,7 @@ const Hero = () => {
         <img className='w-full' src="/graphic.png" alt="" />
         </div>
       </div> */}
-      <div>
+      <div className='mt-[40px]'>
         <a href="#" className='px-8 py-3 rounded-[50px] text-white text-[16px] border border-white'>Say hi👋</a>
       </div>
       </div>
