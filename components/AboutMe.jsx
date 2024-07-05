@@ -22,7 +22,6 @@ const AboutMe = () => {
                 start: "top 47%",
                 end: "top 46%",     
                 scrub: 2,
-                // markers: true
             }
         });
         gsap.fromTo(".about-title2, .about-desc2", {
@@ -37,7 +36,6 @@ const AboutMe = () => {
                 start: "top 47%",
                 end: "top 46%",     
                 scrub: 2,
-                // markers: true
             }
         });
         gsap.fromTo(".about-title3, .about-desc3", {
@@ -52,7 +50,6 @@ const AboutMe = () => {
                 start: "top 30%",
                 end: "top 29%",     
                 scrub: 2,
-                // markers: true
             }
         });
     }, []);
