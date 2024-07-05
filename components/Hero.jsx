@@ -51,11 +51,6 @@ const Hero = () => {
           <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">DEVELOPER</h2>
         </div>
       </div>
-      {/* <div className='mt-[100px]'>
-        <div className='aspect-[339/175] w-[339px] max-w-[100%] flex'>
-        <img className='w-full' src="/graphic.png" alt="" />
-        </div>
-      </div> */}
       <div className='mt-[40px]'>
         <a href="#" className='px-8 py-3 rounded-[50px] text-white text-[16px] border border-white'>Say hi👋</a>
       </div>
