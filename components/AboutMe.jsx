@@ -67,7 +67,7 @@ const AboutMe = () => {
 
   return (
     <div className="container mx-auto about-section relative py-[40px] text-white">
-      <div className="flex justify-between items-center pb-6">
+      <div className="flex justify-between items-center pb-6 about-title">
         <div>
           <h2 className="text-white text-2xl">About Me</h2>
         </div>
