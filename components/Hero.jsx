@@ -1,13 +1,13 @@
-"use client"
-import React, { useEffect } from 'react';
-import { gsap } from 'gsap';
-import Marquee from './Marquee';
-import { League_Spartan } from 'next/font/google';
+"use client";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
+import Marquee from "./Marquee";
+import { League_Spartan } from "next/font/google";
 
 const spartan = League_Spartan({
-  weight: ['400', '700'],
-  subsets: ['latin']
-})
+  weight: ["400", "700"],
+  subsets: ["latin"],
+});
 
 const Hero = () => {
   // useEffect(() => {
@@ -27,7 +27,9 @@ const Hero = () => {
   // }, []);
 
   return (
-    <div className={`hero-section container mx-auto ${spartan.className} py-[100px] border-b border-[#484E53]`}>
+    <div
+      className={`hero-section container mx-auto ${spartan.className} py-[100px] border-b border-[#484E53]`}
+    >
       {/* <div className='text-white text-center m-auto text-[96px] mt-[195px]'>
         <h1 className='opacity-1'><span>R</span><span>I</span><span>Z</span><span>W</span><span>A</span><span>A</span><span>N</span> <span>A</span><span>N</span><span>S</span><span>A</span><span>R</span><span>I</span></h1>
       </div>
@@ -36,45 +38,76 @@ const Hero = () => {
       </div> */}
 
       {/* Hero Text */}
-      <div className='flex flex-col justify-center items-center'>
-      <div className='text-[75px] leading-[1] text-white flex flex-col items-center justify-center'>
-        <div className=''>
-          <h1 className=''>RIZWAAN ANSARI</h1>
+      <div className="flex flex-col justify-center items-center">
+        <div className="text-[75px] leading-[1] text-white flex flex-col items-center justify-center">
+          <div className="">
+            <h1 className="">RIZWAAN ANSARI</h1>
+          </div>
+          <div className="">{/* <h2 className=''>ANSARI</h2> */}</div>
+          <div className="">
+            <h2>
+              FULL <span className="text-purple-500">STACK</span>
+            </h2>
+          </div>
+          <div className="">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
+              DEVELOPER
+            </h2>
+          </div>
         </div>
-        <div className=''>
-        {/* <h2 className=''>ANSARI</h2> */}
-        </div>
-        <div className=''>
-          <h2>FULL <span className='text-purple-500'>STACK</span></h2>
-        </div>
-        <div className=''>
-          <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">DEVELOPER</h2>
+        <div className="mt-[40px]">
+          <a
+            href="#"
+            className="px-8 py-3 rounded-[50px] text-white text-[16px] border border-white"
+          >
+            Say hi👋
+          </a>
         </div>
       </div>
-      <div className='mt-[40px]'>
-        <a href="#" className='px-8 py-3 rounded-[50px] text-white text-[16px] border border-white'>Say hi👋</a>
-      </div>
-      </div>
-      
-      <div className='pt-[64px]'>
-      <div className='marquee-animation text-white text-[4rem] overflow-x-auto whitespace-nowrap'>
-        <div className='content inline-block whitespace-nowrap'>
-          <p className='inline-block'>BUILDING WEBSITES PRODUCTS AND <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600'>EXPERIENCES</span>&nbsp; </p>
+
+      <div className="pt-[64px]">
+        <div className="marquee-animation text-white text-[4rem] overflow-x-auto no-scrollbar whitespace-nowrap">
+          <div className="content inline-block whitespace-nowrap">
+            <p className="inline-block">
+              BUILDING WEBSITES PRODUCTS AND{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
+                EXPERIENCES
+              </span>
+              &nbsp;{" "}
+            </p>
+          </div>
+          <div className="content inline-block whitespace-nowrap">
+            <p className="inline-block">
+              BUILDING WEBSITES PRODUCTS AND{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
+                EXPERIENCES
+              </span>
+              &nbsp;{" "}
+            </p>
+          </div>
+          {/* <Marquee /> */}
         </div>
-        <div className='content inline-block whitespace-nowrap'>
-        <p className='inline-block'>BUILDING WEBSITES PRODUCTS AND <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600'>EXPERIENCES</span>&nbsp; </p>
+        <div className="marquee-animation2 text-white text-[4rem] overflow-x-auto no-scrollbar whitespace-nowrap">
+          <div className="content inline-block whitespace-nowrap">
+            <p className="inline-block">
+              REACT JS NEXT JS NODE JS{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
+                PHP DOCKER WORDPRESS
+              </span>
+              &nbsp;{" "}
+            </p>
+          </div>
+          <div className="content inline-block whitespace-nowrap">
+            <p className="inline-block">
+              REACT JS NEXT JS NODE JS{" "}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600">
+                PHP DOCKER WORDPRESS
+              </span>
+              &nbsp;{" "}
+            </p>
+          </div>
+          {/* <Marquee /> */}
         </div>
-        {/* <Marquee /> */}
-      </div>
-      <div className='marquee-animation2 text-white text-[4rem] overflow-x-auto whitespace-nowrap'>
-        <div className='content inline-block whitespace-nowrap'>
-          <p className='inline-block'>REACT JS NEXT JS NODE JS <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600'>PHP DOCKER WORDPRESS</span>&nbsp; </p>
-        </div>
-        <div className='content inline-block whitespace-nowrap'>
-        <p className='inline-block'>REACT JS NEXT JS NODE JS <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-purple-600'>PHP DOCKER WORDPRESS</span>&nbsp; </p>
-        </div>
-        {/* <Marquee /> */}
-      </div>
       </div>
     </div>
   );

@@ -51,3 +51,7 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none; 
+}
