@@ -85,7 +85,6 @@ const Hero = () => {
               &nbsp;{" "}
             </p>
           </div>
-          {/* <Marquee /> */}
         </div>
         <div className="marquee-animation2 text-white text-[4rem] overflow-x-auto no-scrollbar whitespace-nowrap">
           <div className="content inline-block whitespace-nowrap">
@@ -106,7 +105,6 @@ const Hero = () => {
               &nbsp;{" "}
             </p>
           </div>
-          {/* <Marquee /> */}
         </div>
       </div>
     </div>
