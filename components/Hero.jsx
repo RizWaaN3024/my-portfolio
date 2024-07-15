@@ -43,7 +43,7 @@ const Hero = () => {
           <div className="">
             <h1 className="">RIZWAAN ANSARI</h1>
           </div>
-          <div className="">{/* <h2 className=''>ANSARI</h2> */}</div>
+          <div className=""><h2 className=''>ANSARI</h2></div>
           <div className="">
             <h2>
               FULL <span className="text-purple-500">STACK</span>
