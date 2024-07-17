@@ -137,8 +137,7 @@ const Navbar = () => {
   return (
     <div className='container mx-auto flex items-center justify-between pt-9'>
       <div className=''>
-        {/* <img src="/logo-no-background.svg" className='logo' height={70} width={68} alt="" /> */}
-        <h1 className='text-white text-[28px] font-bold'>Rizwaan<span className='text-[#D46868]'>.</span></h1>
+        <h1 className='text-white text-[28px] font-bold logo'>Rizwaan<span className='text-[#D46868]'>.</span></h1>
       </div>
       <div className='' onClick={handleClick}>
         <img src="/ham.svg" className='cursor-pointer' height={24} width={36} alt="" />
